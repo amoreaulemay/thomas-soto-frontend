@@ -1,0 +1,13 @@
+.Link--wrapper {
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 0.05em;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.NavBar--center > .Link--wrapper:not(:last-child)::after {
+    content: "-";
+    margin-left: var(--gap-size);
+    cursor: default;
+}

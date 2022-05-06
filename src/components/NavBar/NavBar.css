@@ -1,0 +1,36 @@
+/* Custom Properties */
+.NavBar--wrapper {
+    --padding-vertical: 36px;
+    --padding-horizontal: 27px;
+}
+
+.NavBar--wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 101px;
+}
+
+.NavBar--wrapper > nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% - 2 * var(--padding-horizontal));
+    height: fit-content;
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Middle Section */
+.NavBar--center {
+    --gap-size: 8px;
+}
+
+.NavBar--center {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-size);
+}
