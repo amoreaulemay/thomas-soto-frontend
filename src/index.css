@@ -24,12 +24,14 @@ code {
 
 body {
     background: url(./assets/Mobile.svg) center center no-repeat;
-    background-size: auto 50%;
+    background-attachment: fixed;
+    background-size: auto 65%;
 }
 
 @media screen and (min-width: 550px) {
     body {
         background: url(./assets/Desktop.svg) center center no-repeat;
-        background-size: 50% auto;
+        background-attachment: fixed;
+        background-size: 65% auto;
     }
 }

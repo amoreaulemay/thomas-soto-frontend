@@ -1,0 +1,16 @@
+.VideoCard--wrapper {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media screen and (min-width: 550px) {
+    .VideoCard--wrapper {
+        aspect-ratio: 21 / 10;
+        background-size: contain;
+    }
+}

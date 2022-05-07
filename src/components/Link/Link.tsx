@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
 import "./Link.css";
 
-export default function Link(props: { children: string }): JSX.Element {
+export default function NavLink(props: {
+    children: string;
+    to: string;
+}): JSX.Element {
     return (
-        <span className="Link--wrapper" role="link">
+        <Link to={props.to} className="Link--wrapper" role="link">
             {props.children}
-        </span>
+        </Link>
     );
 }

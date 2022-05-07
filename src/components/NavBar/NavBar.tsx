@@ -8,12 +8,12 @@ export default function NavBar(): JSX.Element {
             <nav>
                 <section className="NavBar--left"></section>
                 <section className="NavBar--center">
-                    <Link>Work</Link>
-                    <Link>Fiction</Link>
-                    <Link>Contact</Link>
+                    <Link to="/">Work</Link>
+                    <Link to="/fiction">Fiction</Link>
+                    <Link to="/contact">Contact</Link>
                 </section>
                 <section className="NavBar--right">
-                    <Link>IG</Link>
+                    <Link to="/">IG</Link>
                 </section>
             </nav>
         </header>

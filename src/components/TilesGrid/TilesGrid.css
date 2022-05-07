@@ -1,0 +1,110 @@
+.TilesGrid--wrapper {
+    --min-top-trail: 30vh;
+}
+
+.TilesGrid--wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 30px;
+}
+
+.TilesGrid--wrapper > section {
+    flex: 1 1 auto;
+}
+
+.TilesGrid--wrapper > section.TilesGrid--left,
+.TilesGrid--wrapper > section.TilesGrid--right {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: unset;
+}
+
+.TilesGrid--wrapper > section.TilesGrid--left > *:nth-child(odd),
+.TilesGrid--wrapper > section.TilesGrid--right > *:nth-child(even) {
+    margin-left: auto;
+    z-index: 2;
+}
+
+.TilesGrid--wrapper > section.TilesGrid--left > *:nth-child(even),
+.TilesGrid--wrapper > section.TilesGrid--right > *:nth-child(odd) {
+    margin-right: auto;
+}
+
+.TilesGrid--wrapper > section.TilesGrid--left > *:nth-child(even),
+.TilesGrid--wrapper > section.TilesGrid--right > *:nth-child(even) {
+    margin-top: -15px;
+}
+
+.TilesGrid--wrapper > section.TilesGrid--left > *:first-child,
+.TilesGrid--wrapper > section.TilesGrid--right > *:first-child {
+    margin-top: calc(var(--min-top-trail) + 25vh);
+}
+
+.TilesGrid--wrapper > section.TilesGrid--left > *:nth-child(2n),
+.TilesGrid--wrapper > section.TilesGrid--right > *:nth-child(2n) {
+    margin-bottom: 150px;
+}
+
+.TilesGrid--wrapper > section.TilesGrid--center {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: unset;
+    gap: 60px;
+    padding: 0 30px;
+    padding-bottom: 30px;
+}
+
+@media screen and (min-width: 550px) {
+    .TilesGrid--wrapper > section.TilesGrid--left,
+    .TilesGrid--wrapper > section.TilesGrid--right {
+        display: flex;
+        flex: 1 1 25%;
+        z-index: 3;
+    }
+
+    .TilesGrid--wrapper > section.TilesGrid--center {
+        flex: 2 1 50%;
+        gap: 30px;
+        padding-top: calc(50vh - 89px);
+    }
+
+    .TilesGrid--wrapper > section.TilesGrid--center > div:first-child > * {
+        margin-top: -25%;
+    }
+
+    .TilesGrid--wrapper > section.TilesGrid--center > div:nth-child(even) > * {
+        background-position: center right;
+    }
+
+    .TilesGrid--wrapper
+        > section.TilesGrid--center
+        > div:nth-child(odd):not(:first-child)
+        > * {
+        background-position: center left;
+    }
+
+    .TilesGrid--wrapper > section.TilesGrid--center > div:nth-child(even) {
+        margin-right: -15%;
+    }
+
+    .TilesGrid--wrapper
+        > section.TilesGrid--center
+        > div:nth-child(odd):not(:first-child) {
+        margin-left: -25%;
+    }
+
+    .TilesGrid--wrapper
+        > section.TilesGrid--center
+        > div:nth-child(4n):not(:first-child) {
+        margin-top: -15%;
+        z-index: -1;
+    }
+
+    .TilesGrid--wrapper > section.TilesGrid-center > div > img {
+        max-height: 25vh;
+    }
+}

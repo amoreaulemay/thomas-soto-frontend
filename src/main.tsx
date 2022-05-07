@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import NavBar from "./components/NavBar/NavBar";
+import { BrowserRouter } from "react-router-dom";
+import Index from ".";
 import "./index.css";
-import Home from "./views/Home";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-        <NavBar />
-        <Home />
+        <BrowserRouter basename="/thomas-soto-frontend/">
+            <Index />
+        </BrowserRouter>
     </React.StrictMode>
 );
