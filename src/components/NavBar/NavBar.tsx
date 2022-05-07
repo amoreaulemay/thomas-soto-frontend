@@ -13,7 +13,13 @@ export default function NavBar(): JSX.Element {
                     <Link to="/contact">Contact</Link>
                 </section>
                 <section className="NavBar--right">
-                    <Link to="/">IG</Link>
+                    <a
+                        href="https://www.instagram.com/thomas.soto_/"
+                        target="_blank"
+                        className="Link--wrapper"
+                    >
+                        IG
+                    </a>
                 </section>
             </nav>
         </header>

@@ -58,7 +58,7 @@
     padding-bottom: 30px;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 750px) {
     .TilesGrid--wrapper > section.TilesGrid--left,
     .TilesGrid--wrapper > section.TilesGrid--right {
         display: flex;
@@ -70,6 +70,12 @@
         flex: 2 1 50%;
         gap: 30px;
         padding-top: calc(50vh - 89px);
+    }
+
+    .TilesGrid--wrapper > section.TilesGrid--center > div:first-child {
+        align-self: center;
+        width: 125%;
+        z-index: 4;
     }
 
     .TilesGrid--wrapper > section.TilesGrid--center > div:first-child > * {

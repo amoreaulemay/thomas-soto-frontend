@@ -6,6 +6,7 @@ import "./styles/Home.css";
 import { stills } from "../data/stills";
 import VerticalCard from "../components/VerticalCard/VerticalCard";
 import { videos } from "../data/videos";
+import { gradualOpacity } from "../scripts/gradualOpacity";
 
 function* cardGenerator() {
     let i = 0;
@@ -31,6 +32,8 @@ function* verticalGenerator() {
 }
 
 export default function Home(): JSX.Element {
+    gradualOpacity();
+
     const videoCards = [...cardGenerator()];
 
     const fullStills = [...verticalGenerator()];

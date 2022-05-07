@@ -8,7 +8,7 @@
     background-position: center center;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 750px) {
     .VideoCard--wrapper {
         aspect-ratio: 21 / 10;
         background-size: contain;
